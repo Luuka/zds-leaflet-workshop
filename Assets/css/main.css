@@ -66,3 +66,34 @@ h1 {
         width: 100%;
     }
 }
+
+
+
+
+#zdsFlag {
+    position: fixed;
+    width: 360px;
+    height: 45px;
+    top: 69px;
+    right: -90px;
+    transform: rotateZ(45deg);
+    text-align: center;
+    background: #19516b;
+    border: 3px solid #f8ad32;
+    box-shadow: 0 0 0 5px 0 #f8ad32;
+    line-height: 40px;
+
+}
+
+#zdsFlag a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+
+    transition: all .5s ease;
+}
+
+#zdsFlag a:hover {
+    color: #f8ad32;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leaflet ZDS workshop</title>
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+
+    <link rel="stylesheet" href="./Assets/css/main.css">
+    <script src="Assets/js/MapManager.js"></script>
+    <script src="Assets/js/GpxFactory.js"></script>
+    <script src="Assets/js/main.js"></script>
+
+</head>
+<body>
+
+    <div id="content">
+        <div id="map"></div>
+        <div id="data">
+            <h1>Leaflet ZDS workshop</h1>
+            <label>Distance</label><br><input type="text" readonly id="distance"><br>
+            <label>Nombre de marqueur</label><br><input type="text" readonly id="markersCount"><br>
+            <button id="exportToGPX">Export en gpx</button><button id="clear">Reset</button><br>
+            <textarea id="gpxOutput" readonly rows="30" cols="40" style="display:none;"></textarea>
+        </div>
+    </div>
+
+</body>
+</html>

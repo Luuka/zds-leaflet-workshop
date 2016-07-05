@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: sans-serif;
+    background: #0f4a65;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    text-align: center;
+}
+#content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#map {
+    width: 75%;
+    height: 100vh;
+    cursor: crosshair;
+    border: 5px solid white;
+}
+
+#data {
+    width: 25%;
+    text-align: center;
+}
+#data input, #data label,  #data button {
+    margin: 15px;
+}
+
+#data input, #data button {
+    border-radius: 5px;
+    border: 1px solid grey;
+    background: #f7f7f7;
+}
+
+#data input {
+    height: 35px;
+    text-align: center;
+}
+
+#data button {
+    width: 150px;
+    height: 55px;
+    background: white;
+    border: 1px solid grey;
+}
+
+#data button:active {
+    background: grey;
+    color: white;
+}
+
+@media screen and (max-width: 1000px){
+    #content {
+        flex-direction: column-reverse;;
+    }
+    #map, #data {
+        width: 100%;
+    }
+}

@@ -11,7 +11,7 @@ var MapManager = function() {
 };
 
 MapManager.prototype.updateData = function() {
-    document.getElementById('distance').value     = Math.round(10*this.distance/1000)/10+" Km";
+    document.getElementById('distance').value     = this.formatDistance(this.distance);
     document.getElementById('markersCount').value = this.waypoints.length;
 };
 
@@ -69,11 +69,17 @@ MapManager.prototype.calculDistance = function() {
     this.distance = 0;
     if(points.length > 1) {
         for (i=0;i<points.length-1;i++) {
+
             this.distance += points[i].distanceTo(points[i+1]);
+            this.waypoints[i+1].bindPopup(this.formatDistance(this.distance)).openPopup();
         }
     }
     this.updateData();
 };
+
+MapManager.prototype.formatDistance = function(distance) {
+    return Math.round(10*distance/1000)/10+" Km";
+}
 
 MapManager.prototype.clearAll = function() {
     var markers = this.waypoints;
